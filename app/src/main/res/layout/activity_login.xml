@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="TESTE\nCINQ"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:hint="E-mail"
+        android:textColorHint="@color/colorPrimary"
+        android:theme="@style/EditTextLoginStyle"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@color/red"
+        app:hintTextAppearance="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailLogin"
+            style="@style/EditTextLoginStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_mail"
+            android:drawablePadding="4dp"
+            android:maxLength="50"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:theme="@style/EditTextTheme" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:hint="Senha"
+        android:textColorHint="@color/colorPrimary"
+        android:theme="@style/EditTextTheme"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@color/red"
+        app:hintTextAppearance="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/tilEmail"
+        app:layout_constraintStart_toStartOf="@+id/tilEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/senhaLogin"
+            style="@style/EditTextLoginStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="4dp"
+            android:maxLength="50"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:theme="@style/EditTextTheme" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        style="@style/botaoStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:text="Entrar"
+        android:textAllCaps="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tilSenha"
+        app:layout_constraintStart_toStartOf="@+id/tilSenha"
+        app:layout_constraintTop_toBottomOf="@+id/tilSenha" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCadastrarLogin"
+        style="@style/botaoStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Cadastrar"
+        android:textAllCaps="true"
+        app:backgroundTint="@color/mango"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

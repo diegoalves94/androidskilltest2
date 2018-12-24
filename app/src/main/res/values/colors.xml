@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff573a</color>
+    <color name="colorPrimaryDark">#e84638</color>
+    <color name="colorAccent">#ffc354</color>
+    <color name="white">#FFFFFF</color>
+    <color name="letterColor">#545454</color>
+    <color name="lightPrimary">#CFD8DC</color>
+    <color name="cancelColor">#8a000000</color>
+    <color name="textSecondary">#757575</color>
+    <color name="red">#e84638</color>
+    <color name="teste1">#ff573a</color>
+    <color name="teste2">#e84638</color>
+    <color name="teste3">#CFD8DC</color>
+    <color name="yellowLight">#f4e3b2</color>
+    <color name="yellowDark">#efc88b</color>
+    <color name="textPrimary">#212121</color>
+    <color name="bgColor">#fafafa</color>
+    <color name="mango">#ffb731</color>
+    <color name="mango2">#ffc354</color>
+    <color name="win_color">#3e64c7</color>
+    <color name="gray">#979797</color>
+</resources>

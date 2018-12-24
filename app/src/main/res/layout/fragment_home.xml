@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor">
+
+        <!--<com.google.android.material.appbar.AppBarLayout-->
+            <!--android:id="@+id/appBarLayout"-->
+            <!--style="@style/AppTheme"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:fitsSystemWindows="true"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent">-->
+
+            <!--<androidx.appcompat.widget.Toolbar-->
+                <!--android:id="@+id/toolbar"-->
+                <!--style="@style/AppTheme"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="?attr/actionBarSize"-->
+                <!--android:background="@color/colorPrimary"-->
+                <!--app:titleTextColor="@color/white"-->
+                <!--app:titleTextAppearance="@style/ToolbarTheme"-->
+                <!--android:fitsSystemWindows="true"-->
+                <!--app:title="Home"-->
+                <!--app:popupTheme="@style/AppTheme.PopupOverlay">-->
+            <!--</androidx.appcompat.widget.Toolbar>-->
+        <!--</com.google.android.material.appbar.AppBarLayout>-->
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nomeUsuario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btnAdicionarUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/ic_person_add"
+                    android:padding="4dp"
+                    android:text="Adicionar usuário"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/listaUsuarios"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/listaUsuarios"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <!--<androidx.appcompat.widget.SearchView-->
+                <!--android:id="@+id/searchView"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="51dp"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:layoutDirection="rtl"-->
+                <!--app:defaultQueryHint="Pesquisar usuários"-->
+                <!--app:layout_constraintEnd_toEndOf="@+id/nomeUsuario"-->
+                <!--app:layout_constraintHorizontal_bias="0.0"-->
+                <!--app:layout_constraintStart_toStartOf="@+id/nomeUsuario"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/nomeUsuario"-->
+                <!--app:queryHint="Pesquisar usuários"-->
+                <!--app:searchIcon="@drawable/ic_search" />-->
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Lista de usuários"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/nomeUsuario"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/nomeUsuario"
+                    app:layout_constraintTop_toBottomOf="@+id/nomeUsuario" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaUsuarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

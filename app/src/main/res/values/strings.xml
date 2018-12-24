@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">TesteCinq</string>
+
+    <!--STRINGS API-->
+    <string name="geral_mensagem_buscandoDados">Carregando</string>
+    <string name="geral_mensagem_naoEncontrado">Não encontrado</string>
+    <string name="geral_mensagem_erroServidor">Erro de Servidor</string>
+    <string name="geral_mensagem_naoAutorizado">Não autorizado</string>
+    <string name="geral_mensagem_erroProblema">Ocorreu um problema</string>
+    <string name="geral_mensagem_erroConexao">Problema de Conexão</string>
+    <string name="geral_mensagem_erroNovamente">Tentar Novamente</string>
+    <string name="geral_mensagem_erroGostariaNovamente">Gostaria de tentar novamente?</string>
+    <string name="geral_button_sim">Sim</string>
+    <string name="geral_button_nao">Não</string>
+    <string name="geral_button_salvar">Salvar</string>
+    <string name="geral_mensagem_conexaoInternet">Verifique a conexão com internet.</string>
+    <string name="geral_button_ok">OK</string>
+    <string name="geral_mensagem_sucesso">Operação realizada com sucesso.</string>
+    <string name="geral_mensagem_aguarde">Aguarde…</string>
+    <string name="geral_mensagem_gps">Localização desabliitada, gostaria de habilitar?</string>
+    <string name="tentar_novamente">Tentar novamente.</string>
+    <string name="plano_validation_toast">Por favor, selecione um plano de saúde.</string>
+    <string name="perfil_validation_foto">Por favor, escolha uma foto para o seu perfil.</string>
+    <string name="email_invalido_error">E-mail inválido!</string>
+    <string name="senha_invalida">Senha inválida!</string>
+    <string name="campo_vazio_error">Campo obrigatório!</string>
+    <string name="senhas_diferenter_error">As senhas não coincidem!</string>
+
+</resources>

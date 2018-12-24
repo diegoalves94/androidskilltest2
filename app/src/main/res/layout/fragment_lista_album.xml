@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ListaAlbumFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/bgColor">
+
+       <!--<com.google.android.material.appbar.AppBarLayout-->
+           <!--android:id="@+id/appBarLayout"-->
+           <!--style="@style/AppTheme"-->
+           <!--android:layout_width="match_parent"-->
+           <!--android:layout_height="wrap_content"-->
+           <!--android:gravity="center"-->
+           <!--android:fitsSystemWindows="true"-->
+           <!--app:layout_constraintEnd_toEndOf="parent"-->
+           <!--app:layout_constraintStart_toStartOf="parent"-->
+           <!--app:layout_constraintTop_toTopOf="parent">-->
+
+           <!--<androidx.appcompat.widget.Toolbar-->
+               <!--android:id="@+id/toolbar"-->
+               <!--style="@style/AppTheme"-->
+               <!--android:layout_width="match_parent"-->
+               <!--android:layout_height="?attr/actionBarSize"-->
+               <!--android:background="@color/colorPrimary"-->
+               <!--app:titleTextColor="@color/white"-->
+               <!--app:titleTextAppearance="@style/ToolbarTheme"-->
+               <!--android:fitsSystemWindows="true"-->
+               <!--app:title="Lista de albums"-->
+               <!--app:popupTheme="@style/AppTheme.PopupOverlay"/>-->
+       <!--</com.google.android.material.appbar.AppBarLayout>-->
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/listaAlbum"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:scrollbars="vertical"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintVertical_bias="0.0" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

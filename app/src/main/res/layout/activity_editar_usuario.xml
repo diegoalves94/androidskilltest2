@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".EditarUsuarioActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:titleTextColor="@color/white"
+            app:titleTextAppearance="@style/ToolbarTheme"
+            android:fitsSystemWindows="true"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNome"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/letterColor"
+                android:hint="Nome"
+                android:textColorHint="@color/gray"
+                android:theme="@style/EditTextCadastroTheme"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@color/red"
+                app:hintTextAppearance="@color/letterColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nomeEditar"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawablePadding="4dp"
+                    android:maxLength="50"
+                    android:imeOptions="actionNext"
+                    android:inputType="text|textCapWords"
+                    android:theme="@style/EditTextCadastroTheme" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/letterColor"
+                android:hint="E-mail"
+                android:textColorHint="@color/gray"
+                android:theme="@style/EditTextCadastroTheme"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@color/red"
+                app:hintTextAppearance="@color/letterColor"
+                app:layout_constraintEnd_toEndOf="@+id/tilNome"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tilNome"
+                app:layout_constraintTop_toBottomOf="@+id/tilNome">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailEditar"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_mail_cadastro"
+                    android:drawablePadding="4dp"
+                    android:maxLength="50"
+                    android:enabled="false"
+                    android:textColor="@color/gray"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:theme="@style/EditTextCadastroTheme" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSenha"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/letterColor"
+                android:hint="Senha"
+                android:textColorHint="@color/gray"
+                android:theme="@style/EditTextCadastroTheme"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@color/red"
+                app:hintTextAppearance="@color/letterColor"
+                app:layout_constraintEnd_toEndOf="@+id/tilEmail"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tilEmail"
+                app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/senhaEditar"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_lock_cadastro"
+                    android:drawablePadding="4dp"
+                    android:maxLength="50"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:theme="@style/EditTextCadastroTheme" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilConfirmaSenha"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="@color/letterColor"
+                android:hint="Confirmar senha"
+                android:textColorHint="@color/gray"
+                android:theme="@style/EditTextCadastroTheme"
+                android:visibility="visible"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@color/red"
+                app:hintTextAppearance="@color/letterColor"
+                app:layout_constraintEnd_toEndOf="@+id/tilSenha"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tilSenha"
+                app:layout_constraintTop_toBottomOf="@+id/tilSenha">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirmaSenhaEditar"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_lock_cadastro"
+                    android:drawablePadding="4dp"
+                    android:maxLength="50"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:theme="@style/EditTextCadastroTheme" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditar"
+                style="@style/botaoStyle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:text="Editar"
+                android:textAllCaps="true"
+                app:backgroundTint="@color/colorAccent"
+                app:cornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilConfirmaSenha"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
